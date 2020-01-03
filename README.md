@@ -26,6 +26,11 @@ A list of other roles hosted on Galaxy should go here, plus any details in
 regards to parameters that may need to be set for other roles, or variables that
 are used from other roles.
 
+Export the environment variable `GIT_SSH_KEY` before running the `molecule
+test` command to allow git access to a private repository.
+
+    export GIT_SSH_KEY=`cat /path/to/git/private/key`
+
 Example Playbook
 ----------------
 
