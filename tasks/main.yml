@@ -9,11 +9,13 @@
       content: "{{ lookup('env', 'GIT_SSH_KEY') }}\n"
       dest: "/tmp/git_key"
       mode: "0600"
+  delegate_to: 127.0.0.1
 
 - name: Clone code
   git:
     accept_hostkey: "yes"
     repo: "git@github.com:onaio/zebra.git"
-    dest: "/opt/zebra"
+    dest: "/tmp/zebra"
     version: "master"
     key_file: "/tmp/git_key"
+  delegate_to: 127.0.0.1
