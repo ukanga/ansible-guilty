@@ -11,6 +11,11 @@
       mode: "0600"
   delegate_to: 127.0.0.1
 
+- name: Ensure code directory does not exist
+  file:
+      path: "/tmp/zebra"
+      state: absent
+
 - name: Clone code
   git:
     accept_hostkey: "yes"
