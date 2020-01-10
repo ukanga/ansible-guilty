@@ -1,7 +1,7 @@
 ---
 pipeline:
   molecule:
-    image: lowess/drone-molecule:2.6.8
+    image: ukanga/drone-molecule:2.6.8
     pull: true
     task: test
 
