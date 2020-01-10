@@ -6,15 +6,10 @@
 
 - name: Copy git key
   copy:
-      content: "{{ lookup('env', 'GIT_SSH_KEY') }}\n"
-      dest: "/tmp/git_key"
-      mode: "0600"
+    content: "{{ lookup('env', 'GIT_SSH_KEY') }}\n"
+    dest: "/tmp/git_key"
+    mode: "0600"
   delegate_to: 127.0.0.1
-
-- name: Ensure code directory does not exist
-  file:
-      path: "/tmp/zebra"
-      state: absent
 
 - name: Clone code
   git:
