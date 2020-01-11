@@ -19,3 +19,8 @@
     version: "master"
     key_file: "/tmp/git_key"
   delegate_to: 127.0.0.1
+
+- name: compile
+  shell: lein clean-uberjar
+  args:
+    chdir: /tmp/zebra
