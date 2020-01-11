@@ -21,6 +21,8 @@
   delegate_to: 127.0.0.1
 
 - name: compile
-  shell: lein clean-uberjar
+  command: lein clean-uberjar
   args:
     chdir: /tmp/zebra
+    warn: no
+  changed_when: false
