@@ -26,3 +26,4 @@
     chdir: /tmp/zebra
     warn: no
   changed_when: false
+  delegate_to: 127.0.0.1
